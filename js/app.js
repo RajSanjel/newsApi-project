@@ -1,4 +1,3 @@
-
 const ham = document.querySelector('.hamburger')
 const items = document.querySelector('.nav-item')
 const home = document.querySelector(".home")
@@ -17,4 +16,3 @@ if (path == '/contact.html') {
 } else if (path == '/') {
     home.classList.add("nav-active")
 }
-

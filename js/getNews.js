@@ -6,7 +6,7 @@ const prevBtn = document.querySelector(".prev")
 const nextBtn = document.querySelector(".next")
 const cpage = document.querySelector(".cpage")
 const realNews = document.querySelector(".show-news")
-const api = "your-api-key=here"; //get from https://newsapi.org/
+const api = "your_api_key_here"; //get from https://newsapi.org/
 let page = 1;
 if (cpage === null) { } else {
     cpage.innerHTML = `Page: ${page}`
