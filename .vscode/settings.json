@@ -1,4 +1,8 @@
 {
-    "rpc.enabled": true,
-    "compile-hero.disable-compile-files-on-did-save-code": true
+  "[css][html][javascript][json][jsonc][scss][typescript][xml][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "editor.formatOnSave": true,
+  "rpc.enabled": true
 }
