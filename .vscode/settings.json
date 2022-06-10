@@ -1,9 +1,2 @@
 {
-  "compile-hero.disable-compile-files-on-did-save-code": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
-  },
-  "rpc.enabled": true
 }
