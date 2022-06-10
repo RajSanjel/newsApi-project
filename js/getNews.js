@@ -1,16 +1,9 @@
-const newsTitle = document.querySelector(".newsTitle")
-const newsDesc = document.querySelector(".newsDesc")
-const newsUrl = document.querySelector(".newsUrl")
-const newsImg = document.querySelector(".newsImg")
 const prevBtn = document.querySelector(".prev")
 const nextBtn = document.querySelector(".next")
 const cpage = document.querySelector(".cpage")
 const realNews = document.querySelector(".show-news")
-const api = "your_api_key_here"; //get from https://newsapi.org/
+const api = "9bf6a869020045c09031869403a78602"; //get from https://newsapi.org/
 let page = 1;
-if (cpage === null) { } else {
-    cpage.innerHTML = `Page: ${page}`
-}
 
 async function getNews(file) {
     let news = await fetch(file)
@@ -45,13 +38,11 @@ async function getNews(file) {
             } else {
                 img = newsDict.articles[newsID].urlToImage;
             }
-            if (cpage === null) {
-
-            } else {
+            if (cpage !== null) {
                 cpage.innerHTML = `Page: ${page}`
             }
 
-            if (realNews === null) { } else {
+            if (realNews !== null) {
                 realNews.innerHTML += `
     <div id="${newsID}" class="mx-auto  my-3 bg-white shadow-xl shadow-black-700/50 min-h-full w-72 relative ">
         <div class="w-fit max-h=24 truncate"><img class=" mx-0 max-h-32 my-0 w-72"
@@ -80,24 +71,21 @@ async function getNews(file) {
 
 getNews(`https://newsapi.org/v2/everything?domains=wsj.com&page=${page}&apiKey=${api}`)
 
-ham.addEventListener("click", () => {
-    ham.classList.toggle("active")
-    items.classList.toggle("active")
-})
 
-if (prevBtn === null) { } else {
+
+if (prevBtn !== null) {
 
 
     prevBtn.addEventListener("click", () => {
 
-        if (page === 1) { } else {
+        if (page !== 1) {
             realNews.innerHTML = "";
             page = page - 1;
             getNews(`https://newsapi.org/v2/everything?domains=wsj.com&page=${page}&apiKey=${api}`)
         }
     })
 }
-if (nextBtn === null) { } else {
+if (nextBtn !== null) {
     nextBtn.addEventListener("click", () => {
         realNews.innerHTML = "";
         page = page + 1;
