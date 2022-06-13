@@ -1,7 +1,11 @@
 {
+  "[css][html][javascript][json][jsonc][scss][typescript][xml][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.fixAll.eslint": true,
     "source.organizeImports": true
-  }
+  },
+  "editor.formatOnSave": true
 }
