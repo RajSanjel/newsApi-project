@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vite",
-    "eslint": "eslint --fix ."
+    "eslint": "eslint --fix .",
+    "prettier": "prettier -w ."
   },
   "keywords": [],
   "author": "",
